@@ -12,6 +12,7 @@ const SearchBar = () => {
                         alt="search-logo"
                         width={30}
                         height={30}
+                        className="w-auto h-auto"
                       />
                       <input
                         type="text"

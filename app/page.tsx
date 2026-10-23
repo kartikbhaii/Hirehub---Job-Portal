@@ -21,7 +21,7 @@ export default function Home() {
             width={400}
             height={500}
             priority
-            className="max-w-140"
+            className="w-auto h-auto max-w-140"
           />
         </div>
       </section>
@@ -35,6 +35,7 @@ export default function Home() {
                     alt="search-log"
                     width={30}
                     height={30}
+                    className="w-auto h-auto"
                   />
                   <input
                     type="text"
