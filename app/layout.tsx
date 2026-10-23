@@ -1,4 +1,5 @@
 
+import { ClerkProvider } from '@clerk/nextjs'
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import type { Metadata } from "next";
@@ -39,10 +40,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${outfit.variable} ${ovo.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
-        {children}
-        <Footer />
-        </body>
+        <ClerkProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ClerkProvider>
+      </body>
     </html>
   );
 }
