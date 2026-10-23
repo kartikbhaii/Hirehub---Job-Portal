@@ -4,7 +4,7 @@ export const jobs = [
     title: "Full Stack Developer",
     company: "Google",
     location: "Bengaluru, India",
-    salary: "₹12,00,000 / year",
+    salary: "50,00,000 / year",
     experience: "Fresher",
     type: "Full Time",
 
@@ -33,8 +33,8 @@ export const jobs = [
     id: "2",
     title: "Frontend Developer",
     company: "Meta",
-    location: "Bengaluru, India",
-    salary: "₹10,00,000 / year",
+    location: "Remote",
+    salary: "30,00,000 / year",
     experience: "Fresher",
     type: "Full Time",
 

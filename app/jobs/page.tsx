@@ -24,16 +24,16 @@ const Jobs = () => {
                   <h1 className="font-semibold text-[#155DFC]">{job.title}</h1>
                   <p className="text-md">{job.company}</p>
                 </div>
-                <div className="flex justify-between items-center gap-2 w-7/12 text-gray-600">
-                  <Image src="/location.png" alt="location-img" width={15} height={15} />
+                <div className="flex justify-between items-center gap-6 w-7/12 text-gray-600">
+                  <Image src="/location.png" alt="location-img" width={15} height={15} className="-mr-4" />
                   <p className=" text-gray-500">{job.location}</p>
-                  <Image src="/money.png" alt="salary-img" width={15} height={15} />
+                  <Image src="/money.png" alt="salary-img" width={15} height={15} className="-mr-4" />
                   <p className=" text-gray-500">{job.salary}</p>
-                  <Image src="/briefcase.png" alt="briefcase-img" width={15} height={15} />
+                  <Image src="/briefcase.png" alt="briefcase-img" width={15} height={15} className="-mr-4" />
                   <p className=" text-gray-500">{job.experience}</p>
-                  <Image src="/time.png" alt="time-img" width={15} height={15} />
+                  <Image src="/time.png" alt="time-img" width={15} height={15} className="-mr-4" />
                   <p className=" text-gray-500">{job.type}</p>
-                  <Link href={`/jobs/${job.id}`} className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded ">View Details</Link>
+                  <Link href={`/jobs/${job.id}`} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded cursor-pointer">View Details</Link>
                 </div>
               </div>
             </div>
