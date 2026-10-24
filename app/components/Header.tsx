@@ -38,13 +38,13 @@ const Header = () => {
       <div className="flex gap-4 text-[#454545] items-center">
         <Show when="signed-out">
           <SignInButton mode="modal">
-            <button className="cursor-pointer text-[#454545] hover:text-blue-800">
+            <button className="cursor-pointer text-[#454545] hover:text-blue-700">
               Login
             </button>
           </SignInButton>
-
+          <div className="h-8 border-l border-gray-300"></div>
           <SignUpButton mode="modal">
-            <button className="cursor-pointer bg-blue-800 hover:bg-blue-900 rounded-lg p-1.5 text-white">
+            <button className="cursor-pointer bg-blue-700 hover:bg-blue-800 rounded-lg p-1.5 text-white">
               Signup
             </button>
           </SignUpButton>
@@ -54,11 +54,6 @@ const Header = () => {
           <UserButton />
         </Show>
 
-        <div className="h-8 border-l border-gray-300"></div>
-
-        <Link href="/" className="hover:text-blue-800">
-          Employers / Post Job
-        </Link>
       </div>
     </div>
   );
