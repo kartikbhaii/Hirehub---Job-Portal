@@ -8,11 +8,10 @@ const userSchema = new Schema(
       required: true,
       unique: true,
     },
-
     role: {
       type: String,
-      enum: ["student", "recruiter"],
-      required: true,
+      enum: ["student", "recruiter", null],
+      default: null,
     },
   },
   { timestamps: true }

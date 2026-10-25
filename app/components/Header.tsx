@@ -1,7 +1,35 @@
+"use client";
+import axios from "axios";
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { Show, SignInButton, SignUpButton, UserButton, useUser, useAuth } from "@clerk/nextjs";
 const Header = () => {
+
+  const { isLoaded, isSignedIn } = useUser();
+  const { getToken } = useAuth();
+
+  useEffect(() => {
+    if (!isLoaded || !isSignedIn) return;
+
+    const handleUserSync = async () => {
+      try {
+        const token = await getToken()
+        console.log("Calling user sync API");
+        await axios.post("/api/user/sync", {}, {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+        console.log("User synced successfully");
+      } catch (err) {
+        console.log(err)
+      }
+    }
+
+    handleUserSync();
+  }, [isLoaded, isSignedIn, getToken]);
+
   return (
     <div className=" w-full p-6 border-b border-gray-300 flex justify-around gap-30">
       <div className="flex items-center">
