@@ -1,5 +1,5 @@
-
 import { ClerkProvider } from '@clerk/nextjs'
+import { Toaster } from 'react-hot-toast';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import type { Metadata } from "next";
@@ -43,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <ClerkProvider>
           <Header />
           {children}
+          <Toaster position='top-center' />
           <Footer />
         </ClerkProvider>
       </body>
