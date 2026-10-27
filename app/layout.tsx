@@ -1,4 +1,4 @@
-import { ClerkProvider } from '@clerk/nextjs'
+// import { ClerkProvider } from '@clerk/nextjs'
 import { Toaster } from 'react-hot-toast';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -40,12 +40,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${outfit.variable} ${ovo.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ClerkProvider>
+        {/* <ClerkProvider> */}
           <Header />
-          {children}
           <Toaster position='top-center' />
+          {children}
           <Footer />
-        </ClerkProvider>
+        {/* </ClerkProvider> */}
       </body>
     </html>
   );

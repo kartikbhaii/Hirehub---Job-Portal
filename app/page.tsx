@@ -21,7 +21,7 @@ export default function Home() {
             width={400}
             height={500}
             priority
-            className="w-auto h-auto max-w-140"
+            className="md:w-auto h-auto md:max-w-140"
           />
         </div>
       </section>

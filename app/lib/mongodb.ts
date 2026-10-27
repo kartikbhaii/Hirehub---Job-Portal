@@ -12,7 +12,7 @@ const cached = (globalThis as typeof globalThis & {
   };
 }).mongoose ??= { conn: null, promise: null };
 
-export async function connect() {
+export async function connectDB() {
   if (cached.conn) return cached.conn;
 
   cached.promise ??= mongoose.connect(DB_URI, {

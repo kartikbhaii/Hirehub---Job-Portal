@@ -26,9 +26,6 @@ const Footer = () => {
           <Link href="/jobs" className="transition-colors hover:text-blue-700">
             Jobs
           </Link>
-          <Link href="/companies" className="transition-colors hover:text-blue-700">
-            Companies
-          </Link>
           <Link href="/about" className="transition-colors hover:text-blue-700">
             About
           </Link>

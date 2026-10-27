@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
   return (
@@ -28,9 +27,6 @@ const Header = () => {
               <Link href="/jobs">Jobs</Link>
             </li>
             <li className="hover:text-blue-800">
-              <Link href="/companies">Companies</Link>
-            </li>
-            <li className="hover:text-blue-800">
               <Link href="/about">About</Link>
             </li>
           </ul>
@@ -38,25 +34,29 @@ const Header = () => {
       </div>
 
       <div className="flex gap-4 text-[#454545] items-center">
-        <Show when="signed-out">
-          <SignInButton mode="modal" forceRedirectUrl="/auth/continue">
-            <button className="cursor-pointer text-[#454545] hover:text-blue-700">
-              Login
-            </button>
-          </SignInButton>
+        {/* <Show when="signed-out"> */}
+        {/* <SignInButton mode="modal" forceRedirectUrl="/auth/continue"> */}
+        <Link href="/login" className="cursor-pointer text-[#454545] p-1.5 hover:text-blue-800">
+          Login
+        </Link>
+        {/* </SignInButton> */}
 
-          <div className="h-8 border-l border-gray-300" />
+        {/* <SignUpButton mode="modal" forceRedirectUrl="/auth/continue"> */}
+        {/* <button className="cursor-pointer bg-blue-700 hover:bg-blue-800 rounded-lg p-1.5 text-white">
+          Signin
+        </button> */}
+        {/* </SignUpButton> */}
+        {/* </Show> */}
 
-          <SignUpButton mode="modal" forceRedirectUrl="/auth/continue">
-            <button className="cursor-pointer bg-blue-700 hover:bg-blue-800 rounded-lg p-1.5 text-white">
-              Signup
-            </button>
-          </SignUpButton>
-        </Show>
+        <div className="h-8 border-l border-gray-200" />
 
-        <Show when="signed-in">
+        <Link href="/signup" className="cursor-pointer bg-blue-800 p-1.5 rounded-lg text-white">
+          Signup
+        </Link>
+
+        {/* <Show when="signed-in">
           <UserButton />
-        </Show>
+        </Show> */}
       </div>
     </div>
   );

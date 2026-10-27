@@ -3,15 +3,13 @@ import mongoose, { Schema } from "mongoose";
 
 const userSchema = new Schema(
   {
-    clerkUserId: {
-      type: String,
-      required: true,
-      unique: true,
-    },
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
     role: {
       type: String,
-      enum: ["student", "recruiter", null],
-      default: null,
+      enum: ["student", "recruiter"],
+      required: true,
     },
   },
   { timestamps: true }
