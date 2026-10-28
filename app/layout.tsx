@@ -1,6 +1,6 @@
 // import { ClerkProvider } from '@clerk/nextjs'
 import { Toaster } from 'react-hot-toast';
-import Header from "./components/Header";
+import Header from './components/Header';
 import Footer from "./components/Footer";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Outfit, Ovo } from "next/font/google";

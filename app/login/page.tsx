@@ -27,17 +27,18 @@ const LoginPage = () => {
 
       router.push(
         data.role === "student"
-          ? "/student/dashboard"
-          : "/recruiter/dashboard"
+          ? "/dashboard/student"
+          : "/dashboard/recruiter"
       );
+
+      router.refresh();
     } catch (error: any) {
-      toast.error(
-        error.response?.data?.message || "Login failed"
-      );
+      toast.error(error.response?.data?.message || "Login failed");
     } finally {
       setLoading(false);
     }
   }
+
 
   return (
     <div className="w-screen h-screen flex justify-center bg-[#EFF5F9]">
